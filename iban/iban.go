@@ -49,7 +49,6 @@ func (validator *Validator) Validate(ibanString string) IbanValidationResult {
 		ibanValueString += string(append)
 	}
 
-	//value := new(big.Int)
 	value, _ := new(big.Int).SetString(ibanValueString, 10)
 
 	if value.Mod(value, big.NewInt(97)).Cmp(big.NewInt(1)) != 0 {

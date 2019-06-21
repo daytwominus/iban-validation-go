@@ -1,0 +1,103 @@
+28	AL	Albania*
+24	DZ	Algeria
+24	AD	Andorra*
+25	AO	Angola
+20	AT	Austria**
+28	AZ	Azerbaijan*
+22	BH	Bahrain*
+28	BY	Belarus*
+16	BE	Belgium**
+28	BJ	Benin
+20	BA	Bosnia and Herzegovina
+29	BR	Brazil
+24	VG	British Virgin Islands
+22	BG	Bulgaria**
+27	BF	Burkina Faso
+16	BI	Burundi
+27	CM	Cameroon
+25	CV	Cape Verde
+27	FR	Central African Republic
+27	CG	Congo
+21	CR	Costa Rica
+21	HR	Croatia**
+28	CY	Cyprus**
+24	CZ	Czech Republic**
+18	DK	Denmark**
+28	DO	Dominican Republic
+27	EG	Egypt
+20	EE	Estonia**
+18	FO	Faroe Islands*
+18	FI	Finland**
+27	FR	France**
+27	FR	French Guiana
+27	FR	French Polynesia
+27	GA	Gabon
+22	GE	Georgia*
+22	DE	Germany**
+23	GI	Gibraltar**
+27	GR	Greece**
+18	GL	Greenland*
+27	FR	Guadeloupe
+28	GT	Guatemala
+22	GG	Guernsey**
+28	HU	Hungary**
+26	IS	Iceland**
+26	IR	Iran
+23	IQ	Iraq*
+22	IE	Ireland**
+22	IM	Isle of Man**
+23	IL	Israel*
+27	IT	Italy**
+28	CI	Ivory Coast
+22	JE	Jersey**
+30	JO	Jordan*
+20	KZ	Kazakhstan
+20	XK	Kosovo
+30	KW	Kuwait*
+21	LV	Latvia**
+28	LB	Lebanon*
+21	LI	Liechtenstein**
+20	LT	Lithuania**
+20	LU	Luxembourg**
+19	MK	Macedonia
+27	MG	Madagascar
+28	ML	Mali
+31	MT	Malta**
+27	FR	Martinique
+27	MR	Mauritania*
+30	MU	Mauritius
+24	MD	Moldova*
+27	MC	Monaco**
+22	ME	Montenegro
+25	MZ	Mozambique
+18	NL	Netherlands**
+27	FR	New Caledonia
+15	NO	Norway**
+24	PK	Pakistan*
+29	PS	Palestine, State of*
+28	PL	Poland**
+25	PT	Portugal**
+29	QA	Qatar*
+27	FR	Réunion
+24	RO	Romania**
+32	LC	Saint Lucia
+27	FR	Saint-Pierre and Miquelon
+27	SM	San Marino**
+25	ST	Sao Tome and Principe
+24	SA	Saudi Arabia*
+28	SN	Senegal
+22	RS	Serbia
+31	SC	Seychelles
+24	SK	Slovakia**
+19	SI	Slovenia**
+24	ES	Spain**
+24	SE	Sweden**
+21	CH	Switzerland**
+23	TL	Timor-Leste
+24	TN	Tunisia*
+26	TR	Turkey*
+29	UA	Ukraine
+23	AE	United Arab Emirates*
+22	GB	United Kingdom**
+22	VA	Vatican City State/the Holy See
+27	FR	Wallis and Futuna

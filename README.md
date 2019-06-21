@@ -12,6 +12,8 @@ go run ./iban-web-server.go
 
 ```
 
+Default port is 8080
+
 2. Now one can perform calls:
 
 ```cmd

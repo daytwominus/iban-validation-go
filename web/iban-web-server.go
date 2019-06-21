@@ -8,7 +8,7 @@ import (
 	"github.com/daytwominus/iban-validation-web-go/iban"
 )
 
-var validator = iban.NewValidator(iban.IbalLenByCodeInMemoryProvider{})
+var validator = iban.NewValidator(iban.IbalLenByCodeFileProvider{FilePath: "../iban/LenByCode.txt"})
 
 func main() {
 	api := rest.NewApi()
