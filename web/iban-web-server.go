@@ -8,6 +8,8 @@ import (
 	"github.com/daytwominus/iban-validation-web-go/iban"
 )
 
+var validator = iban.NewValidator(iban.IbalLenByCodeInMemoryProvider{})
+
 func main() {
 	api := rest.NewApi()
 	api.Use(rest.DefaultDevStack...)
@@ -23,7 +25,7 @@ func main() {
 }
 
 func ValidateIban(w rest.ResponseWriter, req *rest.Request) {
-	res := iban.Validate(req.PathParam("iban"))
+	res := validator.Validate(req.PathParam("iban"))
 	w.WriteJson(res)
 }
 
@@ -41,7 +43,7 @@ func ValidateMultiple(w rest.ResponseWriter, r *rest.Request) {
 
 	var res []iban.IbanValidationResult
 	for _, s := range multiple.Ibans {
-		res = append(res, iban.Validate(s))
+		res = append(res, validator.Validate(s))
 	}
 
 	w.WriteJson(res)

@@ -2,6 +2,13 @@ package iban
 
 // Hardcoded IBAN lengths depending on country code. The list is valid on 2019-06-19
 
+type IbalLenByCodeInMemoryProvider struct {
+}
+
+func (p IbalLenByCodeInMemoryProvider) LenByCode() map[string]int {
+	return lenByCoutryCode
+}
+
 var lenByCoutryCode = map[string]int{
 	"AL": 28,
 	"DZ": 24,

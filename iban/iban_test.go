@@ -2,6 +2,8 @@ package iban
 
 import "testing"
 
+var validator = NewValidator(IbalLenByCodeInMemoryProvider{})
+
 var validIbans = [...]string{
 	"GB82WEST12345698765432",
 	"AL35202111090000000001234567",
@@ -24,7 +26,7 @@ var invalidIbans = [...]string{
 
 func TestValidIbans(t *testing.T) {
 	for _, iban := range validIbans {
-		res := Validate(iban)
+		res := validator.Validate(iban)
 		if !res.Success {
 			t.Errorf("iban %q has to be correct but validation failed", iban)
 		}
@@ -33,7 +35,7 @@ func TestValidIbans(t *testing.T) {
 
 func TestInvalidIbans(t *testing.T) {
 	for _, iban := range invalidIbans {
-		res := Validate(iban)
+		res := validator.Validate(iban)
 		if res.Success {
 			t.Errorf("iban %q has to be incorrect but validation succeeded", iban)
 		}

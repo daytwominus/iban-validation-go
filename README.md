@@ -2,10 +2,6 @@
 
 Code and infrastructure to validate IBAN written in Golang.
 
-## Building
-
-1. install Go
-
 ## Web server
 
 1. Navigate to ./web dir, run server

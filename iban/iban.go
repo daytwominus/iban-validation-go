@@ -6,7 +6,17 @@ import (
 	"strings"
 )
 
-func Validate(ibanString string) IbanValidationResult {
+type Validator struct {
+	lenByCodeProvider IbalLenByCodeProvider
+}
+
+func NewValidator(lenByCodeProvider IbalLenByCodeProvider) *Validator {
+	return &Validator{
+		lenByCodeProvider: lenByCodeProvider,
+	}
+}
+
+func (validator *Validator) Validate(ibanString string) IbanValidationResult {
 	ibanUp := strings.ToUpper(ibanString)
 
 	if len(ibanUp) < 2 {
@@ -17,7 +27,7 @@ func Validate(ibanString string) IbanValidationResult {
 
 	length := 0
 	ok := false
-	length, ok = lenByCoutryCode[code]
+	length, ok = validator.lenByCodeProvider.LenByCode()[code]
 
 	if !ok {
 		return IbanValidationResult{Message: fmt.Sprintf("No country code found: %v", code)}
