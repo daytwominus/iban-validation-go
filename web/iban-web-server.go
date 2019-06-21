@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/daytwominus/iban-validation-web-go/iban"
+	"github.com/daytwominus/iban-validation-go/iban"
 	"github.com/gorilla/mux"
 )
 

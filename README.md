@@ -6,11 +6,11 @@ Code and infrastructure to validate IBAN written in Golang.
 
 Ensure go is installed on your machine
 
-To install external dependencies navigate to project's ./web dir and run:
+To install external dependencies navigate to project's dir, run:
 
 ```cmd
 
-go get
+go get ./...
 
 ```
 
