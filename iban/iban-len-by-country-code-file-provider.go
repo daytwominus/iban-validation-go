@@ -11,16 +11,16 @@ import (
 	"strconv"
 )
 
-// IbalLenByCodeFileProvider is responsible for
+// IbanLenByCodeFileProvider is responsible for
 // getting pairs (country-code, iban-length) from file
-type IbalLenByCodeFileProvider struct {
+type IbanLenByCodeFileProvider struct {
 	FilePath string
 	// lenByCoutryCodeFromFile is filled after file is read
 	lenByCoutryCodeFromFile map[string]int
 }
 
 // LenByCode is an implementation of IbalLenByCodeProvider interface
-func (p IbalLenByCodeFileProvider) LenByCode() map[string]int {
+func (p IbanLenByCodeFileProvider) LenByCode() map[string]int {
 	if p.lenByCoutryCodeFromFile != nil {
 		return p.lenByCoutryCodeFromFile
 	}

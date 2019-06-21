@@ -8,7 +8,8 @@ import (
 	"github.com/daytwominus/iban-validation-web-go/iban"
 )
 
-var validator = iban.NewValidator(iban.IbalLenByCodeFileProvider{FilePath: "../iban/LenByCode.txt"})
+// we use file as a source of iban lengths
+var validator = iban.NewValidator(iban.IbanLenByCodeFileProvider{FilePath: "../iban/LenByCode.txt"})
 
 func main() {
 	api := rest.NewApi()

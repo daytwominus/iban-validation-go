@@ -5,7 +5,7 @@ package iban
 import "testing"
 
 // for tests we use hardcoded
-var validator = NewValidator(IbalLenByCodeInMemoryProvider{})
+var validator = NewValidator(IbalLenByCodeHardcodedProvider{})
 
 var validIbans = [...]string{
 	"GB82WEST12345698765432",
