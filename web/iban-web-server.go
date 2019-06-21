@@ -54,7 +54,8 @@ func ValidateMultiple(w http.ResponseWriter, r *http.Request) {
 	err := decoder.Decode(&multiple)
 
 	if err != nil {
-		log.Fatal(err) //todo: write wrong request
+		log.Fatal(err)
+		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 
@@ -65,5 +66,7 @@ func ValidateMultiple(w http.ResponseWriter, r *http.Request) {
 
 	bytes, err := json.Marshal(res)
 
+	w.WriteHeader(http.StatusOK)
+	w.Header().Add("Content-Type", "application/json")
 	fmt.Fprintf(w, "%v", string(bytes))
 }
