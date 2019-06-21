@@ -7,7 +7,6 @@ import (
 )
 
 func Validate(ibanString string) IbanValidationResult {
-
 	ibanUp := strings.ToUpper(ibanString)
 
 	if len(ibanUp) < 2 {
