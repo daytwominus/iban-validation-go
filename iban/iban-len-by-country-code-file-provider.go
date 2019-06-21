@@ -11,15 +11,18 @@ import (
 	"strconv"
 )
 
+// IbalLenByCodeFileProvider is responsible for
+// getting pairs (country-code, iban-length) from file
 type IbalLenByCodeFileProvider struct {
 	FilePath string
+	// lenByCoutryCodeFromFile is filled after file is read
+	lenByCoutryCodeFromFile map[string]int
 }
 
-var lenByCoutryCodeFromFile map[string]int
-
+// LenByCode is an implementation of IbalLenByCodeProvider interface
 func (p IbalLenByCodeFileProvider) LenByCode() map[string]int {
-	if lenByCoutryCodeFromFile != nil {
-		return lenByCoutryCodeFromFile
+	if p.lenByCoutryCodeFromFile != nil {
+		return p.lenByCoutryCodeFromFile
 	}
 
 	file, err := os.Open(p.FilePath)
@@ -42,6 +45,6 @@ func (p IbalLenByCodeFileProvider) LenByCode() map[string]int {
 		log.Fatal(err)
 	}
 
-	lenByCoutryCodeFromFile = ret
+	p.lenByCoutryCodeFromFile = ret
 	return ret
 }

@@ -1,14 +1,17 @@
+// Hardcoded IBAN lengths depending on country code. The list is valid on 2019-06-19
 package iban
 
-// Hardcoded IBAN lengths depending on country code. The list is valid on 2019-06-19
-
+// IbalLenByCodeInMemoryProvider is responsible for
+// getting hardcoded pairs (country-code, iban-length)
 type IbalLenByCodeInMemoryProvider struct {
 }
 
+// LenByCode is an implementation of IbalLenByCodeProvider interface
 func (p IbalLenByCodeInMemoryProvider) LenByCode() map[string]int {
 	return lenByCoutryCode
 }
 
+// hardcoded values
 var lenByCoutryCode = map[string]int{
 	"AL": 28,
 	"DZ": 24,

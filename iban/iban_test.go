@@ -1,7 +1,10 @@
+// testing iban validation
+
 package iban
 
 import "testing"
 
+// for tests we use hardcoded
 var validator = NewValidator(IbalLenByCodeInMemoryProvider{})
 
 var validIbans = [...]string{

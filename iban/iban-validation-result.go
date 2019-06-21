@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+// IbanValidationResult
+// result of validation
+// Success represents result of validation
+// Message contains additional info if neede
 type IbanValidationResult struct {
 	Success bool   `json:"success"`
 	Message string `json:"message"`

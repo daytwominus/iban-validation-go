@@ -1,3 +1,5 @@
+// IBAn validation functionality
+
 package iban
 
 import (
@@ -10,12 +12,14 @@ type Validator struct {
 	lenByCodeProvider IbalLenByCodeProvider
 }
 
+// cretaes new validator. Specify lenByCodeProvider as a source of pairs (countryCode, IBAN-length)
 func NewValidator(lenByCodeProvider IbalLenByCodeProvider) *Validator {
 	return &Validator{
 		lenByCodeProvider: lenByCodeProvider,
 	}
 }
 
+// IBAN validation routine
 func (validator *Validator) Validate(ibanString string) IbanValidationResult {
 	ibanUp := strings.ToUpper(ibanString)
 
