@@ -11,6 +11,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+const host = "127.0.0.1"
 const port = "8080"
 
 // we use file as a source of iban lengths
@@ -23,11 +24,14 @@ func main() {
 
 	srv := &http.Server{
 		Handler: r,
-		Addr:    "127.0.0.1:" + port,
+		Addr:    host + ":" + port,
 		// Good practice: enforce timeouts for servers you create!
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
+
+	log.Println("Server started at port " + port)
+	log.Println("Press Ctrl+C to stop")
 
 	log.Fatal(srv.ListenAndServe())
 }

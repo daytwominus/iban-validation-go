@@ -76,6 +76,6 @@ Response:
 
 ```go
 
-go ./iban/test
+go test ./iban/
 
 ```
